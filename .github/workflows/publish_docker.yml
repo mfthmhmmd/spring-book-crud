@@ -9,10 +9,16 @@ jobs:
     steps:
       - name: Check out the repo
         uses: actions/checkout@v2
+      
+      - name: Setup Java JDK
+        uses: actions/setup-java@v1.4.2
+        
       - name: Cleaning up maven
-        run: ./mvnw clean
+        run: mvn clean
+        
       - name: Compile
-        run: ./mvnw package
+        run: mvn package
+        
       - name: Push to Docker Hub
         uses: docker/build-push-action@v1
         with:
