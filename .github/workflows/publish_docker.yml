@@ -9,9 +9,9 @@ jobs:
     steps:
       - name: Check out the repo
         uses: actions/checkout@v2
-      -name: Cleaning up maven
+      - name: Cleaning up maven
         run: ./mvnw clean
-      -name: Compile
+      - name: Compile
         run: ./mvnw package
       - name: Push to Docker Hub
         uses: docker/build-push-action@v1
