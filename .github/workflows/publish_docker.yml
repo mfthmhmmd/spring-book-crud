@@ -12,7 +12,8 @@ jobs:
       
       - name: Setup Java JDK
         uses: actions/setup-java@v1.4.2
-        
+        with:
+          java-version: 1.8
       - name: Cleaning up maven
         run: mvn clean
         
