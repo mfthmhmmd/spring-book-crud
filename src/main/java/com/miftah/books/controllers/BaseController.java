@@ -1,4 +1,4 @@
-package com.miftah.books.exceptions;
+package com.miftah.books.controllers;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.validation.FieldError;
@@ -7,9 +7,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 
 import java.util.HashMap;
 
-
-public abstract class ValidationExceptionHandler {
-
+public abstract class BaseController {
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     @org.springframework.web.bind.annotation.ExceptionHandler(MethodArgumentNotValidException.class)
     public HashMap<String, String> handleMethodArgumentNotValidException(MethodArgumentNotValidException e) {

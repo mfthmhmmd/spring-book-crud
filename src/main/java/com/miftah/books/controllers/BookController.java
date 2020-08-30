@@ -1,6 +1,5 @@
 package com.miftah.books.controllers;
 
-import com.miftah.books.exceptions.ValidationExceptionHandler;
 import com.miftah.books.models.Book;
 import com.miftah.books.repositories.BookRepository;
 import org.springframework.data.domain.Sort;
@@ -13,7 +12,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/books")
-public class BookController extends ValidationExceptionHandler {
+public class BookController extends BaseController {
 
     private final BookRepository bookRepository;
 
